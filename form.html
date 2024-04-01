@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h2>Train Booking Form</h2>
+  <form class="container" action="/book-trains" method="post">
+ <form action="/submit_booking" method="post">
+  <label for="pass-type">Pass Type:</label><br>
+  <select id="pass-type" name="pass-type">
+    <option value="easy">Easy</option>
+    <option value="comfort">Comfort</option>
+  </select><br>
+
+  <label for="passenger-category">Passenger Category:</label><br>
+  <select id="passenger-category" name="passenger-category">
+    <option value="adult">Adult</option>
+    <option value="senior">Senior</option>
+    <option value="youth">Youth</option>
+  </select><br>
+
+  <label for="pass-start-date">Start Date:</label><br>
+  <input type="date" id="pass-start-date" name="pass-start-date"><br>
+
+  <label for="number-of-journeys">Number of Journeys:</label><br>
+  <select id="number-of-journeys" name="number-of-journeys">
+    <option value="3">3 Journeys in 7 Days</option>
+    <option value="4">4 Journeys in 7 Days</option>
+    <option value="7">7 Journeys in 15 Days</option>
+    <option value="10">10 Journeys in 30 Days</option>
+  </select><br>
+
+  <label for="first-journey-date">Date of First Journey:</label><br>
+  <input type="date" id="first-journey-date" name="first-journey-date"><br>
+
+  <label for="train-number">Train Number:</label><br>
+  <input type="text" id="train-number" name="train-number"><br>
+
+  <label for="from-station">From Station:</label><br>
+  <input type="text" id="from-station" name="from-station"><br>
+
+  <label for="to-station">To Station:</label><br>
+  <input type="text" id="to-station" name="to-station"><br>
+
+  
+    
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
