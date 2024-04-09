@@ -1,54 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+  <! DOCTYPE html>
+  <html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Booking form</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Railway Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+                    }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba (0, 0, 0, 0.1);
+                              }
+        input [type="text"], input[type="number"], input[type="date"],  
+input [type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-  <h2>Train Booking Form</h2>
-  <form class="container" action="/book-trains" method="post">
- <form action="/submit_booking" method="post">
-  <label for="pass-type">Pass Type:</label><br>
-  <select id="pass-type" name="pass-type">
-    <option value="easy">Easy</option>
-    <option value="comfort">Comfort</option>
-  </select><br>
+    <div class="container">
+        <h2>Railway Ticket Booking</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+            <label for="destination">Train Destination:</label>
+            <select id="destination" required>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+         
+            </select>
+            <button type="submit">Book Ticket</button>
+        </form>
+    </div>
 
-  <label for="passenger-category">Passenger Category:</label><br>
-  <select id="passenger-category" name="passenger-category">
-    <option value="adult">Adult</option>
-    <option value="senior">Senior</option>
-    <option value="youth">Youth</option>
-  </select><br>
-
-  <label for="pass-start-date">Start Date:</label><br>
-  <input type="date" id="pass-start-date" name="pass-start-date"><br>
-
-  <label for="number-of-journeys">Number of Journeys:</label><br>
-  <select id="number-of-journeys" name="number-of-journeys">
-    <option value="3">3 Journeys in 7 Days</option>
-    <option value="4">4 Journeys in 7 Days</option>
-    <option value="7">7 Journeys in 15 Days</option>
-    <option value="10">10 Journeys in 30 Days</option>
-  </select><br>
-
-  <label for="first-journey-date">Date of First Journey:</label><br>
-  <input type="date" id="first-journey-date" name="first-journey-date"><br>
-
-  <label for="train-number">Train Number:</label><br>
-  <input type="text" id="train-number" name="train-number"><br>
-
-  <label for="from-station">From Station:</label><br>
-  <input type="text" id="from-station" name="from-station"><br>
-
-  <label for="to-station">To Station:</label><br>
-  <input type="text" id="to-station" name="to-station"><br>
-
-  
-    
-  <input type="submit" value="Submit">
-</form>
+    <script>
+        const bookingForm = document.getElementById("bookingForm");
+        bookingForm.addEventListener("submit", function (e)
+       {
+          e.preventDefault();
+           
+            alert("Ticket booked successfully!");
+        });
+    </script>
 </body>
 </html>
+    
